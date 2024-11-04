@@ -4,7 +4,6 @@ const path = require("path");
 const filePath = './data/task.json';
 
 //write the task method 
-
 exports.writeTasktoFile = (tasks) => {
     fs.writeFileSync(filePath, JSON.stringify(tasks , null , 3));
 }
