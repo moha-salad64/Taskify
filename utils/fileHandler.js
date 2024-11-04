@@ -5,7 +5,7 @@ const filePath = './data/task.json';
 
 //write the task method 
 exports.writeTasktoFile = (tasks) => {
-    fs.writeFileSync(filePath, JSON.stringify(tasks , null , 3));
+    fs.writeFileSync(filePath, JSON.stringify(tasks , null , 2));
 }
 
 //read the task method
