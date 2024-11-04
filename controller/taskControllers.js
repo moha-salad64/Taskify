@@ -49,6 +49,6 @@ exports.updateTask = (req , res) => {
 }
 
 
-exports.deleteTesk = (req , res) => {
+exports.deleteTask = (req , res) => {
     res.end(JSON.stringify({ message: 'Task deleted successfully'}));
 }
