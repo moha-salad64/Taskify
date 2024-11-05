@@ -28,11 +28,11 @@ exports.createTask = (req , res) =>{
         const newTasks = {
             id: Date.now(),
             title: fields.title,
-            description: fields?.description || "not description",
+            description: fields?.description || '',
             status: fields?.status || 'pending',
             image: image? `/uploads/${image.originalFilename}` : null,
         }
-
+            console.log(fields.description);
         tasks.push(newTasks);
         writeTasktoFile(tasks);
 
