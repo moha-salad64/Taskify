@@ -95,7 +95,7 @@ exports.updateTask = (req , res) => {
 }
 
 exports.deleteTask = (req , res) => {
-        const tasks = readTasksFromFile();
+        const tasks = readTasksfromFile();
         const taskId = parseInt(req.url.split('/').pop());
         const taskIndex = tasks.findIndex(task => task.id === taskId);
     
@@ -108,7 +108,7 @@ exports.deleteTask = (req , res) => {
         }
     
         const updatedTasks = tasks.filter(task => task.id !== taskId);
-        writeTasksToFile(updatedTasks);
+        writeTasktoFile(updatedTasks);
         res.writeHead(200, { 'content-type': 'application/json' });
         res.end(JSON.stringify({
             message: 'Task successfully deleted'
